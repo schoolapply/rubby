@@ -5,7 +5,8 @@
     "micro": "latest"
   },
   "scripts": {
-    "start": "micro"
+    "start": "micro",
+    "now-build": "echo 'Built on TravisCI'"
   },
   "devDependencies": {
     "micro-dev": "^3.0.0"
