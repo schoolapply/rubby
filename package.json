@@ -1,0 +1,13 @@
+{
+  "name": "rubby",
+  "version": "0.0.0",
+  "dependencies": {
+    "micro": "latest"
+  },
+  "scripts": {
+    "start": "micro"
+  },
+  "devDependencies": {
+    "micro-dev": "^3.0.0"
+  }
+}
