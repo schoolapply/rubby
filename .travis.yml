@@ -8,13 +8,13 @@ script: npm test # Here you could also run the build step of your application
 before_deploy: npm install now --no-save # Install Now CLI on Travis
 deploy:
   - provider: script # Run a custom deployment script which we will define below
-    script: now --public --team schoolapply --token $NOW_TOKEN && now alias --team schoolapply --token $NOW_TOKEN ${TRAVIS_BRANCH}-rubby
+    script: now --public --team $NOW_TEAM --token $NOW_TOKEN && now alias --team $NOW_TEAM --token $NOW_TOKEN ${TRAVIS_BRANCH}-rubby
     skip_cleanup: true
     on:
       all_branches: true
       master: false
   - provider: script
-    script: now --public --team schoolapply --token $NOW_TOKEN && now alias --team schoolapply --token $NOW_TOKEN rubby
+    script: now --public --team $NOW_TEAM --token $NOW_TOKEN && now alias --team $NOW_TEAM --token $NOW_TOKEN rubby
     skip_cleanup: true
     on:
       master: true
